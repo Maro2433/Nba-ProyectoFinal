@@ -182,8 +182,6 @@ nav ul li ul li a:hover {
 
 .registro input {
     display: flex;
-    justify-content: center;
-    align-items: center;
     padding: 7px;
     outline: none;
     border: 1px solid black;
@@ -231,11 +229,14 @@ nav ul li ul li a:hover {
 }
 
 .condiciones {
-    display: flex;
-    position: relative;
-    gap: 20px;
     font-weight: bold;
     text-align: center;
+}
+
+#condiciones{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .registro p {
@@ -252,7 +253,8 @@ nav ul li ul li a:hover {
     position: relative;
     gap: 20px;
     font-weight: bold;
-    text-align: center;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
 }
 
