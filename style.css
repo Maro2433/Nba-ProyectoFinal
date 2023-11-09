@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Barlow Condensed', sans-serif;
+    text-decoration: none;
+}
+
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #040D12;
+    z-index: 10;
+}
+
+/*Header Superior*/
+
+.header__superior {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.logo img {
+    width: 150px;
+}
+
+.search input {
+    width: 300px;
+    padding: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/*Barra Menú*/
+
+.container_menu {
+    width: 100%;
+    height: 70px;
+    background: #040D12;
+    padding: 0px 20px;
+}
+
+.menu {
+    max-width: 1200px;
+    margin: auto;
+    height: 100%;
+}
+
+.menu img{
+    width: 35px;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+nav {
+    height: 100%;
+}
+
+nav > ul {
+    height: 100%;
+    display: flex;
+}
+
+nav  ul  li {
+    height: 100%;
+    list-style: none;
+    position: relative;
+}
+
+nav > ul > li:first-child > a {
+    background-image: url(./Assets/Imagenes/home.png);
+    background-size: 35px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding: 20px 40px;
+}
+
+nav > ul > li:first-child:hover > a {
+    background-image: url(./Assets/Imagenes/home.png);
+    background-size: 35px;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+nav > ul > li > a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 14px;
+    color: white;
+    text-transform: uppercase;
+    font-size: 15px;
+    transition: all 300ms ease;
+}
+
+nav > ul > li > a:hover {
+    transform: scale(1.1);
+    background: #93B1A6;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+#selected {
+    transform: scale(1.1);
+    background-color: #93B1A6;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+/*SUBMENÚ*/
+
+nav ul li ul {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 90px;
+    left: -5px;
+    padding: 14px 0px;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 20;    
+    transition: all 300ms ease;
+}
+
+nav ul li:hover ul {
+    visibility: visible;
+    opacity: 1;
+    top: 60px;
+}
+
+nav ul li ul li a {
+    display: block;
+    color: black;
+    padding: 6px;
+    padding-left: 14px;
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 300ms ease;
+}
+
+nav ul li ul li a:hover {
+    background: #0074C7;
+    color: white;
+    transform: scale(1.1);
+    padding-left: 30px;
+    font-size: 15px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+/*MAIN*/
+
+.principal {
+    text-transform: uppercase;
+    position: relative;
+    top: 180px;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+}
+
+.principal h3 {
+    font-size: 50px;
+}
+
+video {
+    width: 100%;
+    height: 50%;
+}
+
+.eventos {
+    display: flex;
+    text-transform: uppercase;
+    flex-direction: column;
+    position: relative;
+    top: 250px;
+    left: 40px;
+    border: 2px solid #040D12;
+    border-radius: 3%;
+    width: 430px;
+    box-sizing: border-box;
+    padding: 15px;
+    box-shadow: 4px 2px 9px 1px rgb(162 155 155);
+}
+
+.eventos h3 {
+    display: flex;
+    margin-top: 10px;
+    justify-content: center;
+    padding: 10px;
+}
+
+.eventos h3:hover {
+    transition: all 0.5s ease;
+    color: #0074C7;
+    cursor: pointer;
+}
+
+.eventos > ul > li {
+    display: flex;
+    margin-left: 30px;
+    padding: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.eventos > ul > li:hover {
+    color: #0074C7;
+}
+
+.trofeos {
+    text-transform: uppercase;
+    display: flex;
+    position: relative;
+    top: -250px;
+    margin-left: 500px;
+    padding: 20px;
+    border-collapse: collapse;
+}
+
+.categorias th {
+    padding: 10px;
+}
+
+.categorias td {
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+}
+
+
+/*FOOTER*/
+
+.footer {
+    display: block;
+    margin-top: 50px;
+    background-color: #040D12;
+}
+
+.footer p {
+    color: white;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 40px;
+    padding: 20px;
+}
+
+.footer div {
+    display: flex;
+    gap: 30px;
+    position: relative;
+    margin-top: 50px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.footer div:hover {
+    transition: all 300ms ease;
+}
+

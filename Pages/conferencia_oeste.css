@@ -1,0 +1,712 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Barlow Condensed', sans-serif;
+    text-decoration: none;
+}
+
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #040D12;
+    z-index: 10;
+}
+
+/*Header Superior*/
+
+.header__superior {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.logo img {
+    width: 150px;
+}
+
+.search input {
+    width: 300px;
+    padding: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/*Barra Menú*/
+
+.container_menu {
+    width: 100%;
+    height: 70px;
+    background: #040D12;
+    padding: 0px 20px;
+}
+
+.menu {
+    max-width: 1200px;
+    margin: auto;
+    height: 100%;
+}
+
+.menu img{
+    width: 35px;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+nav {
+    height: 100%;
+}
+
+nav > ul {
+    height: 100%;
+    display: flex;
+}
+
+nav  ul  li {
+    height: 100%;
+    list-style: none;
+    position: relative;
+}
+
+nav > ul > li:first-child > a {
+    background-image: url(../Assets/Imagenes/home.png);
+    background-size: 35px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding: 20px 40px;
+}
+
+nav > ul > li:first-child:hover > a {
+    background-image: url(../Assets/Imagenes/home.png);
+    background-size: 35px;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+nav > ul > li > a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 14px;
+    color: white;
+    text-transform: uppercase;
+    font-size: 15px;
+    transition: all 300ms ease;
+}
+
+nav > ul > li > a:hover {
+    transform: scale(1.1);
+    background: #93B1A6;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+#selected {
+    transform: scale(1.1);
+    background-color: #93B1A6;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+/*SUBMENÚ*/
+
+nav ul li ul {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 90px;
+    left: -5px;
+    padding: 14px 0px;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 15;    
+    transition: all 300ms ease;
+}
+
+nav ul li:hover ul {
+    visibility: visible;
+    opacity: 1;
+    top: 60px;
+}
+
+nav ul li ul li a {
+    display: block;
+    color: black;
+    padding: 6px;
+    padding-left: 14px;
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 300ms ease;
+}
+
+nav ul li ul li a:hover {
+    background: #0074C7;
+    color: white;
+    transform: scale(1.1);
+    padding-left: 30px;
+    font-size: 15px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+
+/*Titulo*/
+
+.titulo_principal {
+    display: flex;
+    position: relative;
+    margin-top: 250px;
+    justify-content: center;
+    text-transform: uppercase;
+}
+
+/*CARDS CONFERENCIA OESTE*/
+
+.container_cards {
+    width: 200px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    position: relative;
+    top: 50px;
+    left: 200px;
+    column-gap: 40px;
+    row-gap: 40px;
+    transition: all 300ms ease;
+}
+
+.container_cards a{
+    color: #040D12;
+}
+
+.card_denver {
+    display: flex;
+    width: 300px;
+    height: 300px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 3%;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    transition: all 300ms ease-in-out;
+}
+
+.card_denver:hover {
+    transform: scale(1.05);
+    background: #93B1A6;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.card_denver h3 {
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+}
+
+.card_denver img {
+    display: flex;
+    width: 200px;
+    height: 200px;
+}
+
+.card_mavericks {
+    display: flex;
+    width: 300px;
+    height: 300px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 3%;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    transition: all 300ms ease-in-out;
+}
+
+.card_mavericks:hover {
+    transform: scale(1.05);
+    background: #93B1A6;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.card_mavericks h3 {
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+}
+
+.card_mavericks img {
+    display: flex;
+    width: 200px;
+    height: 200px;
+}
+
+.card_warriors {
+    display: flex;
+    width: 300px;
+    height: 300px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 3%;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    transition: all 300ms ease-in-out;
+}
+
+.card_warriors:hover {
+    transform: scale(1.05);
+    background: #93B1A6;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.card_warriors h3 {
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+}
+
+.card_warriors img {
+    display: flex;
+    width: 200px;
+    height: 200px;
+}
+
+.card_houston {
+    display: flex;
+    width: 300px;
+    height: 300px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 3%;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    transition: all 300ms ease-in-out;
+}
+
+.card_houston:hover {
+    transform: scale(1.05);
+    background: #93B1A6;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.card_houston h3 {
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+}
+
+.card_houston img {
+    display: flex;
+    width: 200px;
+    height: 200px;
+}
+
+.card_clippers {
+    display: flex;
+    width: 300px;
+    height: 300px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 3%;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    transition: all 300ms ease-in-out;
+}
+
+.card_clippers:hover {
+    transform: scale(1.05);
+    background: #93B1A6;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.card_clippers h3 {
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+}
+
+.card_clippers img {
+    display: flex;
+    width: 200px;
+    height: 200px;
+}
+
+.card_lakers {
+    display: flex;
+    width: 300px;
+    height: 300px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 3%;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    transition: all 300ms ease-in-out;
+}
+
+.card_lakers:hover {
+    transform: scale(1.05);
+    background: #93B1A6;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.card_lakers h3 {
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+}
+
+.card_lakers img {
+    display: flex;
+    width: 200px;
+    height: 200px;
+}
+
+.card_memphis {
+    display: flex;
+    width: 300px;
+    height: 300px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 3%;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    transition: all 300ms ease-in-out;
+}
+
+.card_memphis:hover {
+    transform: scale(1.05);
+    background: #93B1A6;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.card_memphis h3 {
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+}
+
+.card_memphis img {
+    display: flex;
+    width: 200px;
+    height: 200px;
+}
+
+.card_minnesota {
+    display: flex;
+    width: 300px;
+    height: 300px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 3%;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    transition: all 300ms ease-in-out;
+}
+
+.card_minnesota:hover {
+    transform: scale(1.05);
+    background: #93B1A6;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.card_minnesota h3 {
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+}
+
+.card_minnesota img {
+    display: flex;
+    width: 200px;
+    height: 200px;
+}
+
+.card_pelicans {
+    display: flex;
+    width: 300px;
+    height: 300px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 3%;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    transition: all 300ms ease-in-out;
+}
+
+.card_pelicans:hover {
+    transform: scale(1.05);
+    background: #93B1A6;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.card_pelicans h3 {
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+}
+
+.card_pelicans img {
+    display: flex;
+    width: 200px;
+    height: 200px;
+}
+
+.card_oklahoma {
+    display: flex;
+    width: 300px;
+    height: 300px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 3%;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    transition: all 300ms ease-in-out;
+}
+
+.card_oklahoma:hover {
+    transform: scale(1.05);
+    background: #93B1A6;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.card_oklahoma h3 {
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+}
+
+.card_oklahoma img {
+    display: flex;
+    width: 190px;
+    height: 120px;
+}
+
+.card_suns {
+    display: flex;
+    width: 300px;
+    height: 300px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 3%;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    transition: all 300ms ease-in-out;
+}
+
+.card_suns:hover {
+    transform: scale(1.05);
+    background: #93B1A6;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.card_suns h3 {
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+}
+
+.card_suns img {
+    display: flex;
+    width: 200px;
+    height: 200px;
+}
+
+.card_portland {
+    display: flex;
+    width: 300px;
+    height: 300px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 3%;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    transition: all 300ms ease-in-out;
+}
+
+.card_portland:hover {
+    transform: scale(1.05);
+    background: #93B1A6;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.card_portland h3 {
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+}
+
+.card_portland img {
+    display: flex;
+    width: 200px;
+    height: 200px;
+}
+
+.card_kings {
+    display: flex;
+    width: 300px;
+    height: 300px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 3%;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    transition: all 300ms ease-in-out;
+}
+
+.card_kings:hover {
+    transform: scale(1.05);
+    background: #93B1A6;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.card_kings h3 {
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+}
+
+.card_kings img {
+    display: flex;
+    width: 200px;
+    height: 200px;
+}
+
+.card_spurs {
+    display: flex;
+    width: 300px;
+    height: 300px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 3%;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    transition: all 300ms ease-in-out;
+}
+
+.card_spurs:hover {
+    transform: scale(1.05);
+    background: #93B1A6;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.card_spurs h3 {
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+}
+
+.card_spurs img {
+    display: flex;
+    width: 200px;
+    height: 200px;
+}
+
+.card_jazz {
+    display: flex;
+    width: 300px;
+    height: 300px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 3%;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    transition: all 300ms ease-in-out;
+}
+
+.card_jazz:hover {
+    transform: scale(1.05);
+    background: #93B1A6;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.card_jazz h3 {
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+}
+
+.card_jazz img {
+    display: flex;
+    width: 200px;
+    height: 200px;
+}
+
+/*Botón Volver*/
+
+.btn-volver{
+    position: relative;
+    top: 100px;
+    left: 620px;
+    width: 140px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid black;
+}
+
+.btn-volver a{
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 10px;
+    justify-content: center;
+}
+
+.btn-volver:hover{
+    transition: all 300ms ease;
+    background-color: #93B1A6;
+}
+
+/*FOOTER*/
+
+.footer {
+    display: block;
+    margin-top: 150px;
+    background-color: #040D12;
+}
+
+.footer p {
+    color: white;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 40px;
+    padding: 20px;
+}
+
+.footer div {
+    display: flex;
+    gap: 30px;
+    position: relative;
+    margin-top: 50px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.footer div:hover {
+    transition: all 300ms ease;
+}
