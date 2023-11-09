@@ -16,14 +16,16 @@ document.getElementById("search-button").addEventListener("click", function () {
     });
 });
 
-// Obtén el botón "Agregar al Carrito" por su id
-    var botonAgregarCarrito = document.getElementById("agregarCarrito");
 
-    // Agrega un evento click al botón
-    botonAgregarCarrito.addEventListener("click", function() {
-        // Muestra un mensaje de alerta cuando se hace clic en el botón
-        alert("Se agregó al carrito");
+// Obtén todos los botones "Agregar al Carrito" por su ID
+  const botonesAgregarCarrito = document.querySelectorAll('#agregarCarrito');
+
+  // Agrega un evento de clic a cada botón
+  botonesAgregarCarrito.forEach((boton) => {
+    boton.addEventListener('click', () => {
+      alert('Se ha agregado al carrito');
     });
+  });
 
 
 
